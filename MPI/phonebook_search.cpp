@@ -74,7 +74,7 @@ void read_phonebook(const vector<string> &files, vector<Contact> &contacts) {
             int comma = line.find(",");
             if (comma == string::npos) continue;
             // Remove any extra formatting and extract name and phone
-            contacts.push_back({line.substr(1, comma - 2), line.substr(comma + 2, line.size() - comma - 3)});
+            contacts.push_back({line.substr(1, comma - 2), line.substr(comma + 2, line.size() - comma - 4)});
         }
     }
 }
